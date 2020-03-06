@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.XuanRan.MiuiXcHt">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:name="com.XuanRan.MiuiXcHt.XuanRanApplication"
+        android:theme="@style/AppTheme"
+        android:resizeableActivity="false">
+        
+        <!--是否启用Xposed模块-->
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true"/>
+        <!--Xposed模块描述-->
+        <meta-data
+            android:name="xposeddescription"
+            android:value="模块描述"/>
+        <!--Xposed兼容最低版本-->
+        <meta-data
+            android:name="xposedminversion"
+            android:value="54"/>
+        <!--适配全面屏-->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="4.0"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+	    <activity
+	        android:name="com.XuanRan.Exception.Handing.ExceptionActivity"/>
+    </application>
+
+</manifest>
